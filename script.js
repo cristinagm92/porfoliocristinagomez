@@ -1,19 +1,32 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const form = document.getElementById("formulario-contacto");
-    const mensaje = document.getElementById("mensaje-exito");
-  
+  // Formulario (por si aún lo tienes en alguna parte)
+  const form = document.getElementById("formulario-contacto");
+  const mensaje = document.getElementById("mensaje-exito");
+
+  if (form && mensaje) {
     form.addEventListener("submit", (e) => {
       e.preventDefault();
-  
-      // Simula envío
       mensaje.style.display = "block";
-  
-      // Limpia el formulario
       form.reset();
-  
-      // Oculta el mensaje después de 5 segundos
       setTimeout(() => {
         mensaje.style.display = "none";
       }, 5000);
     });
-  });
+  }
+
+  // Iconos de contacto
+  const emailIcon = document.getElementById("email-icon");
+  const telefonoIcon = document.getElementById("telefono-icon");
+
+  if (emailIcon) {
+    emailIcon.addEventListener("click", () => {
+      document.getElementById("email-dato").textContent = "christty_92@hotmail.com";
+    });
+  }
+
+  if (telefonoIcon) {
+    telefonoIcon.addEventListener("click", () => {
+      document.getElementById("telefono-dato").textContent = "662357450";
+    });
+  }
+});

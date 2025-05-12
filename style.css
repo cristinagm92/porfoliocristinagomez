@@ -26,6 +26,18 @@ body {
   width: 90%;
   max-width: 1100px;
 }
+.logo {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+}
+
+.logo img {
+  width: 180px; /* Ajusta según necesites */
+  height: auto;
+}
+
 
 /* HERO */
 .hero {

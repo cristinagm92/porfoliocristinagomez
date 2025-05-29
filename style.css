@@ -26,6 +26,8 @@ body {
   width: 90%;
   max-width: 1100px;
 }
+
+/* LOGO */
 .logo {
   position: absolute;
   top: 20px;
@@ -34,10 +36,10 @@ body {
 }
 
 .logo img {
-  width: 180px; /* Ajusta según necesites */
+  width: 180px;
   height: auto;
+  transition: all 0.3s ease;
 }
-
 
 /* HERO */
 .hero {
@@ -45,6 +47,7 @@ body {
   color: white;
   padding: 100px 0;
   text-align: center;
+  position: relative;
 }
 
 .hero .name {
@@ -56,6 +59,14 @@ body {
   font-size: 1.3rem;
   margin-top: 10px;
   margin-bottom: 20px;
+}
+
+.botones-hero {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
 }
 
 .btn {
@@ -71,6 +82,17 @@ body {
 
 .btn:hover {
   background-color: #e0d4ff;
+}
+
+.btn-secundario {
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+}
+
+.btn-secundario:hover {
+  background-color: #fff;
+  color: #7f00ff;
 }
 
 /* TITULOS */
@@ -164,7 +186,6 @@ section h2 {
   transform: scale(1.05);
 }
 
-/* CHECK VERDE ANIMADO */
 .skills-list li::after {
   content: "✔";
   position: absolute;
@@ -181,7 +202,6 @@ section h2 {
   transform: scale(1.2);
 }
 
-/* ICONOS */
 .skills-list li.html {
   background-image: url('https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg');
 }
@@ -207,42 +227,6 @@ section h2 {
 }
 
 /* CONTACTO */
-.contacto form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.contacto input,
-.contacto textarea {
-  padding: 10px 15px;
-  border-radius: 8px;
-  border: none;
-  font-size: 1rem;
-  color: #333;
-}
-
-.contacto textarea {
-  min-height: 120px;
-  resize: vertical;
-}
-
-.contacto button {
-  background-color: #e100ff;
-  color: white;
-  padding: 12px;
-  border: none;
-  border-radius: 25px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-.contacto button:hover {
-  background-color: #c300e0;
-}
 .contacto-icons {
   display: flex;
   justify-content: center;
@@ -277,6 +261,23 @@ section h2 {
   font-size: 1rem;
   color: #fff;
   text-align: center;
+}
+
+/* RESPONSIVE LOGO & HERO PADDING */
+@media (max-width: 768px) {
+  .logo {
+    position: static;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .logo img {
+    width: 140px;
+  }
+
+  .hero {
+    padding-top: 60px;
+  }
 }
 
   
